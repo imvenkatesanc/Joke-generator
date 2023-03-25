@@ -53,3 +53,25 @@ body{
     color: black;
     border-color: rgba(255,255,255,.6);
 }
+h3{
+    color: rgb(255, 116, 144);
+    font-family: monospace;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
+    font-size: medium;
+    padding: 10px;
+}
+.mybtn{
+    background: rgb(255, 123, 150);
+    padding: 7px;
+    border-color: rgb(255, 146, 168);
+    border-radius: 5px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: whitesmoke;
+}
+.mybtn:hover{
+    background: grey;
+    color: whitesmoke;
+    transition: all 250ms ease;
+}
