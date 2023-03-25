@@ -10,6 +10,7 @@ const opt = {
 apiURL = "https://api.api-ninjas.com/v1/jokes?limit=1";
 
 async function newJoke(){
+    try{
     jokesElement.innerText = "Updating...";
     buttonElement.disabled = true;
     buttonElement.innerText = "Loading";
@@ -18,6 +19,11 @@ async function newJoke(){
     buttonElement.disabled = false;
     buttonElement.innerText = "Another Joke";
     jokesElement.innerText = data[0].joke;
+}   catch(error){
+    jokeElement.innerText="No network, check your connection!";
+    buttonElement.disabled = false;
+    buttonElement.innerText = "Tell me a joke"
+    console.log(error);
 }
-
+}
 buttonElement.addEventListener("click", newJoke);
